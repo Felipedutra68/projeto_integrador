@@ -156,21 +156,28 @@ public class Jogo4 extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private int contadorCliques = 0;
+    private final int CLIQUES_NECESSARIOS = 15;
+
 
     private void AtacarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AtacarActionPerformed
         Jogo4 som = new Jogo4();
 
-        // Substitua "caminho/do/seu/som.wav" pelo caminho do seu arquivo de áudio
-        addActionListener(new ActionListener() {
-
-            int i = 0;
-
-            int Atacar = i;
-
-            @Override
+        Atacar.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
+                contadorCliques++;
 
-                for (int i = 0; i > 30; i++) {
+                som.tocarSomEmLoop("C:\\Users\\ADM\\Documents\\NetBeansProjects\\ProjetoIntegrador\\src\\Sons\\espada_[cut_3sec].wav");
+
+                try {
+                    Thread.sleep(100);
+                } catch (InterruptedException ex) {
+                    Logger.getLogger(Jogo4.class.getName()).log(Level.SEVERE, null, ex);
+                }
+
+                som.pararLoop();
+
+                if (contadorCliques >= CLIQUES_NECESSARIOS) {
 
                     som.tocarSomEmLoop("C:\\Users\\ADM\\Documents\\NetBeansProjects\\ProjetoIntegrador\\src\\Sons\\espada_[cut_3sec].wav");
 
@@ -181,19 +188,17 @@ public class Jogo4 extends javax.swing.JFrame {
                     }
 
                     som.pararLoop();
-                    i++;
+
+                    JOptionPane.showMessageDialog(Atacar, "Você o golpeia repetidamente e o estraçalha com sua arma. Você andou para fora da caverna ", " \nVoce andou para fora da caverna ", JOptionPane.WARNING_MESSAGE);
+
+                    Jogo5 jp = new Jogo5();
+                    jp.setLocationRelativeTo(jp);
+                    jp.setVisible(true);
+                    dispose();
+
                 }
-
             }
-
         });
-
-        JOptionPane.showMessageDialog(Atacar, "Você o golpeia repetidamente e o estraçalha com sua arma. Você andou para fora da caverna ", " \nVoce andou para fora da caverna ", JOptionPane.WARNING_MESSAGE);
-
-        Jogo5 jp = new Jogo5();
-        jp.setLocationRelativeTo(jp);
-        jp.setVisible(true);
-        dispose();
 
     }//GEN-LAST:event_AtacarActionPerformed
 
@@ -226,6 +231,30 @@ public class Jogo4 extends javax.swing.JFrame {
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(Jogo4.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
