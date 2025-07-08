@@ -157,7 +157,7 @@ public class Jogo4 extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private int contadorCliques = 0;
-    private final int CLIQUES_NECESSARIOS = 5;
+    private final int CLIQUES_NECESSARIOS = 15;
 
 
     private void AtacarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AtacarActionPerformed
@@ -167,6 +167,7 @@ public class Jogo4 extends javax.swing.JFrame {
             public void actionPerformed(ActionEvent e) {
                 contadorCliques++;
 
+                
                 if (contadorCliques >= CLIQUES_NECESSARIOS) {
 
                     som.tocarSomEmLoop("C:\\Users\\ADM\\Documents\\NetBeansProjects\\ProjetoIntegrador\\src\\Sons\\espada_[cut_3sec].wav");
