@@ -157,7 +157,7 @@ public class Jogo4 extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private int contadorCliques = 0;
-    private final int CLIQUES_NECESSARIOS = 15;
+    private final int CLIQUES_NECESSARIOS = 5;
 
 
     private void AtacarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AtacarActionPerformed
@@ -167,19 +167,11 @@ public class Jogo4 extends javax.swing.JFrame {
             public void actionPerformed(ActionEvent e) {
                 contadorCliques++;
 
-                som.tocarSomEmLoop("C:\\Users\\ADM\\Documents\\NetBeansProjects\\ProjetoIntegrador\\src\\Sons\\espada_[cut_3sec].wav");
-
-                try {
-                    Thread.sleep(100);
-                } catch (InterruptedException ex) {
-                    Logger.getLogger(Jogo4.class.getName()).log(Level.SEVERE, null, ex);
-                }
-
-                som.pararLoop();
-
                 if (contadorCliques >= CLIQUES_NECESSARIOS) {
 
                     som.tocarSomEmLoop("C:\\Users\\ADM\\Documents\\NetBeansProjects\\ProjetoIntegrador\\src\\Sons\\espada_[cut_3sec].wav");
+                    
+                    JOptionPane.showMessageDialog(Atacar, "Você o golpeia repetidamente e o estraçalha com sua arma. Você andou para fora da caverna ", " \nVoce andou para fora da caverna ", JOptionPane.WARNING_MESSAGE);
 
                     try {
                         Thread.sleep(100);
@@ -188,8 +180,6 @@ public class Jogo4 extends javax.swing.JFrame {
                     }
 
                     som.pararLoop();
-
-                    JOptionPane.showMessageDialog(Atacar, "Você o golpeia repetidamente e o estraçalha com sua arma. Você andou para fora da caverna ", " \nVoce andou para fora da caverna ", JOptionPane.WARNING_MESSAGE);
 
                     Jogo5 jp = new Jogo5();
                     jp.setLocationRelativeTo(jp);
