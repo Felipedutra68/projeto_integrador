@@ -99,7 +99,7 @@ public class Jogo7 extends javax.swing.JFrame {
 
         jLabel4.setFont(new java.awt.Font("Blackadder ITC", 0, 24)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel4.setText("Contribuidores: Felipe, Felipe, Felipe ");
+        jLabel4.setText("Contribuidores: Felipe, Felipe, Luis ");
 
         jLabel5.setFont(new java.awt.Font("Blackadder ITC", 0, 24)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(0, 0, 0));

@@ -332,7 +332,7 @@ public class JFramePrincipal_Jogo extends javax.swing.JFrame {
 
                 try {
                     dispose();
-                    Jogo1 jp = new Jogo1();
+                    Jogo0 jp = new Jogo0();
                     jp.setLocationRelativeTo(jp);
                     jp.setVisible(true);
 

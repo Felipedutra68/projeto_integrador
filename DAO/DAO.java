@@ -26,7 +26,6 @@ public class DAO {
     private static String EXCLUIR_PERSONAGEM = "delete from personagen where id = ?;";
     private static String LISTAR_PERSONAGENS = "select * from personagen where 1 = 1;";
     private static String CONSULTAR_USUARIO = "select usuario, senha from usuario wh-**ere usuario = ? and senha = ?;";
-    
 
     //public DAO(){
     public void cadastrarCliente(Cliente cliente) throws SQLException {
@@ -74,7 +73,7 @@ public class DAO {
 
     public void alterarCliente(String id, Cliente cliente) throws SQLException {
         Connection connection = Conexao.getConn().abrirConexao();
-        connection.setAutoCommit(false);
+        //connection.setAutoCommit(false);
         try {
             ps = connection.prepareStatement(ALTERAR_CLIENTE);
             int i = 1;
@@ -90,6 +89,9 @@ public class DAO {
 
         } catch (SQLException e) {
             e.printStackTrace();
+
+        } finally {
+            fecharConexao();
         }
     }
 
@@ -158,4 +160,7 @@ public class DAO {
     }
 
     //private void fecharConexao(){}
+    private void fecharConexao() {
+
+    }
 }
