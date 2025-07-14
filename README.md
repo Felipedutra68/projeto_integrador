@@ -58,8 +58,8 @@ Os dados são salvos pelo comando
 
 ## 📌 BD: 
 
-Este java class é o responsável pela criptografia da senha do login que consiste
-em pegar a senha e aumentar o tamanho e substituir as letras por caracteres números ou outras letras. 
+O BD é bem simples ele é essencial para que o java class Conexão faça a conexão do mysql e o java pelo comando
+( connect = Conexao.getConn().abrirConexao();).  
 
 
 --
@@ -67,17 +67,27 @@ em pegar a senha e aumentar o tamanho e substituir as letras por caracteres núm
 
 ## 📌 ModeloTabela:
 
-Este java class é o responsável pela conexão entre o java e o mysql por meio do comando 
-(private static final String URL = "jdbc:mysql://localhost:3306/rpg";) 
-que faz a conexão e o armazenamento de dados entre o java e o mysql ser possível.
+Este java class é o responsável pela modelagem da tabela, aonde cada coluna vai estar e quais informações serão listadas nelas, por exemplo o comando
+
+ ( private static final String[] colunas = {"id", "Nome", "Sexo", "Classe"};)
+
+que define a ordem das colunas e qual o nome de cada uma, por outro lado o comando
+
+( } else if (columnIndex == 1) {)
+
+ define qual informação vai para cada linha da tabela. 
 
 
 ---
 
 ## 📌 Tela de login: 
 
-Este java class é o responsável pela criptografia da senha do login que consiste
-em pegar a senha e aumentar o tamanho e substituir as letras por caracteres números ou outras letras. 
+Na tela de login você informa sua senha e usuário que são salvos pelo DAO no mysql, e são criptografadas.
+ A senha é identificada pelo comando
+
+ ((cripto.criptografar().equals("63A9F0EA7BB98050796B649E85481845")) {)
+
+ que pega a criptografia da senha e a usa como referência para passar para a próxima tela.
 
 
 ---
@@ -85,17 +95,41 @@ em pegar a senha e aumentar o tamanho e substituir as letras por caracteres núm
 
 ## 📌 Tabela de personagens:
 
-Este java class é o responsável pela conexão entre o java e o mysql por meio do comando 
-(private static final String URL = "jdbc:mysql://localhost:3306/rpg";) 
-que faz a conexão e o armazenamento de dados entre o java e o mysql ser possível.
-
+Nesta tabela você pode cadastrar, alterar e excluir personagens pelo DAO, e começar o jogo.
 
 ---
 
 ## 📌 Tabela de cadastro:
 
-Este java class é o responsável pela criptografia da senha do login que consiste
-em pegar a senha e aumentar o tamanho e substituir as letras por caracteres números ou outras letras. 
+Nesta tabela é aonde você coloca as informações do seu personagem e o DAO armazena no mysql.
 
 
 ---
+
+
+# 📌 Outros comandos:
+
+
+Um dos comandos utilizados no jogo e o de colocar imagens como fundo de tela, um
+ dos comandos utilizados é o de definir o tamanho da imagem
+
+ ( setSize(1020, 620);)
+
+e o comando de adicionar a imagem
+
+ ImageIcon imagemBackground = new ImageIcon("C:\\Users\\ADM\\Documents\\NetBeansProjects\\ProjetoIntegrador\\src\\Imagens\\morte.png");. 
+
+Outro comando utilizado é o de som em loop
+
+ (som.tocarSomEmLoop("C:\\Users\\ADM\\Documents\\NetBeansProjects\\ProjetoIntegrador\\src\\Sons\\Micolash - Screaming or Cumming_ You Decide.wav");
+
+, que pega o arquivo de som e o toca em loop´. 
+
+O comando mais utilizado é o de troca de tela que é executado pela cadeia de comando abaixo:
+
+(Jogo20 jp = new Jogo20();)
+( jp.setLocationRelativeTo(jp);)
+(jp.setVisible(true);)
+
+
+
