@@ -8,7 +8,7 @@ Meu projeto constitui em um jogo interativo que constituí em vários quadros
 com múltiplas escolhas (Mortais ou não) em que você (O aventureiro perdido) precisa se esquivar dos perigos de sua terra natal,
 e talvez enfrentar e derrotar a sombra que não pode ser tocada.
 
-![Captura de Tela](link-para-uma-imagem-do-projeto.png)
+
 
 ---
 
