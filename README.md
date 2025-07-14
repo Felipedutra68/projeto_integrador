@@ -17,7 +17,7 @@ e talvez enfrentar e derrotar a sombra que não pode ser tocada.
 A estrutura do projeto se baseia em uma tela de login, uma tabela de personagens e uma tela de cadastro,
 junto com várias telas do jogo como a de seleção de classe e telas de múltipla escolha. 
 
-![acampamento](https://github.com/Felipedutra68/projeto_integrador/blob/main/Acampamento.png)
+![acampamento](https://github.com/Felipedutra68/projeto_integrador/blob/main/Captura%20de%20tela%202025-07-14%20203824.png)
 
 
 ---
