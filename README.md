@@ -8,7 +8,7 @@ Meu projeto constitui em um jogo interativo que constituí em vários quadros
 com múltiplas escolhas (Mortais ou não) em que você (O aventureiro perdido) precisa se esquivar dos perigos de sua terra natal,
 e talvez enfrentar e derrotar a sombra que não pode ser tocada.
 
-
+![inicio](https://github.com/Felipedutra68/projeto_integrador/blob/main/Captura%20de%20tela%202025-07-14%20202929.png)
 
 ---
 
